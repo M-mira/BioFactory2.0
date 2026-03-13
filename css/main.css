@@ -1,0 +1,760 @@
+@import url(normalize.css);
+@import url(sections/footer.css);
+@import url(sections/foryou.css);
+@import url(sections/grettings.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #618370;
+            color: #FFFFFF;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Цветовая схема */
+        :root {
+            --black: #000000;
+            --black-light: #141414;
+            --white: #ffffff;
+            --green: #000000;
+            --green-glow: #456455;
+            --pink: #5b3e4c;
+            --pink-dark: #692f53;
+            --pink-glow: #934b5e;
+            --gray: #2A2A2A;
+        }
+
+        /* Типография */
+        h1, h2, h3, h4 {
+            font-family: 'Unbounded', 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2 .glow {
+            color: var(--pink);
+            text-shadow: 0 0 10px var(--pink-glow);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Навигация */
+        header {
+            padding: 1.5rem 5%;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #5b3e4c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            background-color: #5b3e4c;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--pink);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--green);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            background: var(--green);
+        }
+
+        nav a.active {
+            color: var(--pink);
+        }
+
+        nav a.active::after {
+            width: 100%;
+            background: var(--pink);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #618370;
+            margin: 2px 0;
+            transition: 0.3s;
+        }
+
+        /* Основной контент */
+        main {
+            min-height: calc(100vh - 200px);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem 5%;
+        }
+
+        section {
+            margin: 4rem 0;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--pink);
+            color: var(--white);
+            box-shadow: 0 0 20px rgba(179, 0, 94, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--pink-dark);
+            box-shadow: 0 0 30px var(--pink-glow);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--green);
+            color: var(--green);
+            transform: translateY(-2px);
+        }
+
+        /* Карточки */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgb(0, 0, 0);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s;
+            border: 1px solid var(--gray);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--pink);
+            box-shadow: 0 0 30px rgba(179, 0, 94, 0.2);
+        }
+
+        .card.pink {
+            background: var(--pink);
+        }
+
+        .card.green {
+            background: #27533a;
+            color: var(--black);
+        }
+
+        .card.white {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .card.black {
+            background: rgb(99, 99, 99);
+            border: 2px solid rgb(80, 80, 80);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Главный экран (Hero) */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, var(--pink) 20%, transparent 30%),
+                        radial-gradient(circle at 70% 80%, var(--green) 10%, transparent 30%);
+            opacity: 0.15;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            color: var(--green);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .hero-title {
+            font-size: 5rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            color: var(--pink);
+            text-shadow: 0 0 20px var(--pink-glow);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            color: #CCCCCC;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Таймлайн */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--green), var(--pink));
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: #495e52;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--gray);
+            transition: 0.3s;
+        }
+
+        .timeline-content:hover {
+            border-color: var(--pink);
+        }
+
+        .timeline-year {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--pink);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 3px solid var(--black);
+            z-index: 2;
+        }
+
+        .timeline-dot.green { background: var(--green); }
+        .timeline-dot.pink { background: var(--pink); }
+        .timeline-dot.white { background: var(--white); }
+
+        /* Сетка ученых */
+        .scientists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .scientist-card {
+            background: rgb(42, 85, 62);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid var(--gray);
+        }
+
+        .scientist-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--green);
+        }
+
+        .scientist-header {
+            height: 100px;
+            background: linear-gradient(135deg, var(--pink), rgb(144, 174, 144));
+            position: relative;
+        }
+
+        /* .scientist-avatar {
+            width: 100px;
+            height: 100px;
+            background: var(--black);
+            border-radius: 50%;
+            border: 3px solid var(--pink);
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        } */
+
+        .scientist-info {
+            padding: 3rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .scientist-name {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: rgb(3, 45, 24);
+            font-weight: bold;
+        }
+
+        .scientist-quote {
+            font-style: italic;
+            color: #AAAAAA;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        /* Технологии */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            background:  rgb(42, 85, 62);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid var(--gray);
+            transition: 0.3s;
+        }
+
+        .tech-item:hover {
+            border-color: var(--green);
+            box-shadow: 0 0 30px rgba(0, 204, 106, 0.2);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color:  rgb(3, 45, 24);
+        }
+
+        /* Профессии */
+        .profession-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .profession-item {
+            background: rgb(42, 85, 62);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid var(--gray);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .profession-item:hover {
+            border-color: var(--pink);
+            transform: translateX(10px);
+        }
+
+        .profession-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .profession-salary {
+            color: rgb(172, 225, 196);;
+            font-weight: 600;
+        }
+
+        .profession-desc {
+            color: #AAAAAA;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+
+        /* Ресурсы */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .resource-category h3 {
+            color: var(--pink);
+            margin-bottom: 1.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            margin-bottom: 1rem;
+        }
+
+        .resource-list a {
+            color: var(--white);
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .resource-list a:hover {
+            color: var(--green);
+            transform: translateX(5px);
+        }
+
+        /* Футер */
+        footer {
+            background: #5b3e4c;
+            border-top: 1px solid var(--gray);
+            padding: 3rem 5% 1.5rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, white, rgb(48, 104, 48));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .footer-quote {
+            color: rgb(114, 139, 114);
+            font-style: italic;
+            margin: 1.5rem 0;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--pink);
+            transform: translateX(5px);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--black-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            border: 1px solid var(--gray);
+        }
+
+        .social-links a:hover {
+            background: var(--pink);
+            border-color: var(--pink);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray);
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 1024px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 2rem; }
+            .hero-title { font-size: 3.5rem; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #3e654f;
+                padding: 2rem;
+                flex-direction: column;
+                align-items: center;
+                border-bottom: 1px solid var(--gray);
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .hero-title { font-size: 2.5rem; }
+            
+            .timeline::before { left: 30px; }
+            .timeline-item,
+            .timeline-item:nth-child(odd) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .timeline-content { width: 100%; margin-left: 60px; }
+            .timeline-dot { left: 30px; }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .btn {
+                text-align: center;
+            }
+        }
+
+        /* Анимации */
+        @keyframes glow {
+            0% { text-shadow: 0 0 10px var(--green); }
+            50% { text-shadow: 0 0 30px var(--pink); }
+            100% { text-shadow: 0 0 10px var(--green); }
+        }
+
+        .glow-text {
+            animation: glow 3s infinite;
+        }
+
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+.page {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .page.active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Фоновые частицы (простые) */
+        .particles-bg {
+            background: radial-gradient(circle at 20% 30%, rgba(0, 204, 106, 0.03) 0%, transparent 20%),
+                        radial-gradient(circle at 80% 70%, rgba(179, 0, 94, 0.03) 0%, transparent 20%);
+        }
+
+        /* Стили для страницы "Профессии" */
+        .profession-item {
+            cursor: pointer;
+        }
+
+        /* Стили для тега "вузы" */
+        .profession-list .profession-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Адаптация для карточек ученых */
+        .scientist-card {
+            margin-bottom: 2rem;
+        }
+
+        /* Эффект свечения для активных элементов */
+        .glow-text {
+            animation: glow 3s infinite;
+        }
+
+        /* Дополнительная анимация для кнопок */
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.3s, height 0.3s;
+        }
+
+        .btn:active::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* Анимация для карточек */
+        .card, .scientist-card, .tech-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }

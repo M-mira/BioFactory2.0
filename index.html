@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFactory | Образовательный портал по биоинженерии </title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+            <header>
+        <div class="logo">
+            <img src="/img/logo 11.svg" alt="#">
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav id="main-nav">
+            <a href="#home" class="active" onclick="showPage('home')">Главная</a>
+            <a href="#history" onclick="showPage('history')">История</a>
+            <a href="#scientists" onclick="showPage('scientists')">Ученые</a>
+            <a href="#tech" onclick="showPage('tech')">Технологии</a>
+            <a href="#professions" onclick="showPage('professions')">Профессии</a>
+            <a href="#resources" onclick="showPage('resources')">Ресурсы</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Главная страница -->
+        <div id="home" class="page active">
+            <section class="hero">
+                <div class="container hero-content">
+                    <div class="hero-subtitle">Погружение в науку будущего</div>
+                    <h1 class="hero-title">BIO<span>FACTORY</span></h1>
+                    <p class="hero-description">От первых микроскопов до редактирования генома - узнай всё о биоинженерии. Начни свой путь в профессию будущего уже сегодня.</p>
+                    <div class="hero-buttons">
+                      <a href="#" class="btn btn-primary" onclick="showPage('history')">Начать знакомство</a>
+                        <a href="#" class="btn btn-secondary" onclick="showPage('tech')">Исследовать разделы</a>
+                    </div>
+                </div>
+            </section>
+
+        <section class="foryou">
+            <div class="container">
+                <div class="foryou__content">
+                    <div class="section-header">
+            <h2 class="section-title">Для кого предназначен данный сайт?</h2>
+            <p class="section-subtitle"></p>
+        </div>
+        
+   
+        <div class="content-block">
+            <div class="block-image">
+                <img src="/img/foryou/pic1.jpg" alt="#">
+            </div>
+            <div class="block-content">
+                <h2>Школьники с интересом к науке</h2>
+                <p class="block-description">
+                    Ученики, которые уже интересуются биологией и инженерией. Сайт поможет углубить знания,
+                     понять реальные задачи профессии и убедиться, что это точно их путь
+                </p>
+            </div>
+        </div>
+        
+   
+        <div class="content-block reverse">
+            <div class="block-image">
+                <img src="/img/foryou/pic4.jpg" alt="#">
+            </div>
+            <div class="block-content">
+                <h2>Школьники в поиске призвания</h2>
+                <p class="block-description">
+                    Ребята, которые пока не понимают свои сильные стороны и сомневаются, подходит ли им биоинженерия.
+                    Курс даст возможность попробовать себя в разных задачах и найти свою точку роста
+            </div>
+        </div>
+        
+        <div class="content-block">
+            <div class="block-image">
+                <img src="/img/foryou/pic3.jpg" alt="#">
+
+            </div>
+            <div class="block-content">
+                <h2>Студенты других специальностей</h2>
+                <p class="block-description">
+                    Студенты, которые поступили на другие специальности, но разочаровались и задумываются
+                    о переходе в биоинженерию. Курс поможет мягко войти в новую сферу, закрыть пробелы и понять, с чего начать
+                </p>
+            </div>
+        </div>
+                </div>
+            </div>
+        </section>
+
+         <div class="container">
+                <h2>Разделы <span class="glow">BioFactory</span></h2>
+                <div class="cards-grid">
+                    <div class="card pink" onclick="showPage('history')">
+                        <div class="card-icon">🧬</div>
+                        <h3>История</h3>
+                        <p>Эволюция биоинженерии</p>
+                    </div>
+                    <div class="card green" onclick="showPage('scientists')">
+                        <div class="card-icon">👨‍🔬</div>
+                        <h3>Ученые</h3>
+                        <p>Великие исследователи и их открытия</p>
+                    </div>
+                    <div class="card white" onclick="showPage('tech')">
+                        <div class="card-icon">🔬</div>
+                        <h3>Технологии</h3>
+                        <p>Инструменты, меняющие реальность</p>
+                    </div>
+                    <div class="card black" onclick="showPage('professions')">
+                        <div class="card-icon">💼</div>
+                        <h3>Профессии</h3>
+                        <p>Кем ты станешь в мире будущего</p>
+                    </div>
+                </div>
+
+                <!-- Блок с фактом -->
+                <div style="background: linear-gradient(135deg, rgb(111, 80, 85), rgb(62, 94, 62)); border-radius: 20px; padding: 3rem; margin: 4rem 0; text-align: center;">
+                    <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 1rem;">Знаешь ли ты?</h3>
+                    <p style="color: var(--white); font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Уже сегодня ученые печатают на 3D-принтере мини-сердца и меняют гены растений. Биоинженерия - это не будущее, это настоящее.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница "История" -->
+        <div id="history" class="page">
+            <div class="container">
+                <h2>История <span class="glow">биоинженерии</span></h2>
+                <p style="color: #392c2c; font-size: 1.2rem; margin-bottom: 3rem;">От наблюдения — к управлению жизнью</p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot green"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1674</div>
+                            <h3>Создание первого микроскопа.</h3>
+                            <p>Антони ван Левенгук создает первый микроскоп и открывает микроорганизмы. Рождение микробиологии.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot white"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1953</div>
+                            <h3>Открытие структуры ДНК.</h3>
+                            <p>Д. Уотсон и Ф. Крик совершили открытие структуры ДНК как двойной спирали.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot pink"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1954</div>
+                            <h3>Появление термина "Биоинженерия"</h3>
+                            <p>Термин «биоинженерия» впервые использовал британский учёный Хайнц Вульф в 1954 году. Он описывал использование растений в строительстве. Позже термин распространился на сельское хозяйство и пищевую промышленность. </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot green"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1967</div>
+                            <h3>Первая программа по биоинженерии</h3>
+                            <p>Первая программа биоинженерии была запущена в 1967 году в Университете штата Миссисипи (США). </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot white"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">1972</div>
+                            <h3>Создание первой рекомбинантной ДНК</h3>
+                            <p>В 1972 году была создана первая рекомбинантная ДНК, что считается формальной датой рождения современной биотехнологии.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot pink"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-year">2000</div>
+                            <h3>Полная расшифровка человеческого генома</h3>
+                            <p>В июне 2000 года было официально обьявлено о завершении работы над черновым вариантом генома человека</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница "Ученые" -->
+        <div id="scientists" class="page">
+            <div class="container">
+                <h2>Великие <span class="glow">ученые</span></h2>
+                <p style="color: #AAAAAA; font-size: 1.2rem; margin-bottom: 3rem;"></p>
+
+                <div class="scientists-grid">
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">🧪</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Луи Пастер</div>
+                            <div class="scientist-quote">«Случай помогает лишь тому, кто к нему подготовлен»</div>
+                            <p>Основоположник микробиологии, создатель вакцин, пастеризации. Доказал невозможность самозарождения жизни.</p>
+                        </div>
+                    </div>
+
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">🌱</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Грегор Мендель</div>
+                            <div class="scientist-quote">«Законы наследственности едины для всех»</div>
+                            <p>Открыл законы наследования признаков, экспериментируя с горохом. Отец генетики.</p>
+                        </div>
+                    </div>
+
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">🧬</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Уотсон и Крик</div>
+                            <div class="scientist-quote">«Мы открыли секрет жизни»</div>
+                            <p>Расшифровали структуру ДНК — двойную спираль. Нобелевская премия 1962 года.</p>
+                        </div>
+                    </div>
+
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">🔬</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Хайнц Вульф</div>
+                            <div class="scientist-quote">«Если мне придется нарядиться клоуном, чтобы научить детей науке, я сделаю это»</div>
+                            <p>Выдающийся британский ученый, изобретатель и популяризатор науки. Он вошел в историю как основатель и популяризатор дисциплины биоинженерия</p>
+                        </div>
+                    </div>
+
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">✂️</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Дудна и Шарпантье</div>
+                            <div class="scientist-quote">«Мы научились редактировать жизнь»</div>
+                            <p>Создатели CRISPR/Cas9 — технологии редактирования генома. Нобелевская премия 2020.</p>
+                        </div>
+                    </div>
+
+                    <div class="scientist-card">
+                        <div class="scientist-header"></div>
+                        <!-- <div class="scientist-avatar">⚛️</div> -->
+                        <div class="scientist-info">
+                            <div class="scientist-name">Ален Аспе</div>
+                            <div class="scientist-quote">«Квантовая биология — новый рубеж»</div>
+                            <p>Пионер квантовой биологии, исследует квантовые эффекты в живых системах.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Страница "Технологии" -->
+        <div id="tech" class="page">
+            <div class="container">
+                <h2>Технологии <span class="glow">будущего</span></h2>
+                <p style="color: #AAAAAA; font-size: 1.2rem; margin-bottom: 3rem;">Инструменты, меняющие реальность</p>
+
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <div class="tech-icon">🧬</div>
+                        <div class="tech-title">CRISPR/Cas9</div>
+                        <p>«Генные ножницы» — технология точного редактирования ДНК. Позволяет удалять, вставлять или исправлять гены.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🖨️</div>
+                        <div class="tech-title">3D-биопринтинг</div>
+                        <p>Печать живых тканей и органов слой за слоем из стволовых клеток. Уже печатают кожу, сосуды, мини-сердца.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧠</div>
+                        <div class="tech-title">Нейроинтерфейсы</div>
+                        <p>Прямая связь мозга с компьютером. Управление протезами силой мысли, восстановление зрения и слуха.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🔬</div>
+                        <div class="tech-title">Биореакторы</div>
+                        <p>Устройства для контролируемого культивирования биологических объектов (микроорганизмов, клеток, тканей). Биореакторные системы широко задействованы в биотехнологических процессах как для получения микроорганизмов, ферментов, клеточных линий, вирусов, рекомбинантных белков, так и разнообразных продуктов различных отраслей.  </p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🦠</div>
+                        <div class="tech-title">Синтетическая биология</div>
+                        <p>Создание искусственных организмов с заданными свойствами. Бактерии, производящие топливо или лекарства.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧪</div>
+                        <div class="tech-title">Органы-на-чипе</div>
+                        <p>Микрочипы, имитирующие работу человеческих органов. Тестирование лекарств без животных и людей.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧫</div>
+                        <div class="tech-title">Клеточная терапия</div>
+                        <p>CAR-T-терапия — перепрограммирование иммунных клеток для уничтожения рака. CAR-T-клетки — живые лекарства.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧬</div>
+                        <div class="tech-title">Генная терапия</div>
+                        <p>Лечение наследственных заболеваний путем замены дефектных генов. Успехи в лечении гемофилии, слепоты.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧬</div>
+                        <div class="tech-title">Импланты и протезы</div>
+                        <p>Искусственные устройства, заменяющие части тела или органы. Например, биоинженерные протезы кожи, искусственные суставы, кардиостимуляторы, аппараты почечного диализа и искусственного кровообращения.</p>
+                    </div>
+
+                    <div class="tech-item">
+                        <div class="tech-icon">🧬</div>
+                        <div class="tech-title">Генные пушки</div>
+                        <p>Устройства для введения ДНК в клетки, например, при создании трансгенных растений.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Страница "Профессии" -->
+        <div id="professions" class="page">
+            <div class="container">
+                <h2>Профессии <span class="glow">будущего</span></h2>
+                <p style="color: #4e3b3b; font-size: 1.2rem; margin-bottom: 2rem;">Кем ты станешь в мире биоинженерии?</p>
+
+                <div style="background: rgb(42, 85, 62); border-radius: 20px; padding: 2rem; margin-bottom: 3rem;">
+                    <h3 style="color: rgb(112, 158, 134);; margin-bottom: 1rem;">🎓 Где учиться в России</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <span style="background: rgba(179, 0, 94, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--pink);">МГУ</span>
+                        <span style="background: rgba(0, 204, 106, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--green);">МФТИ</span>
+                        <span style="background: rgba(179, 0, 94, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--pink);">ИТМО</span>
+                        <span style="background: rgba(0, 204, 106, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--green);">ПМГМУ</span>
+                        <span style="background: rgba(179, 0, 94, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--pink);">СПбПУ</span>
+                        <span style="background: rgba(0, 204, 106, 0.2); padding: 0.5rem 1rem; border-radius: 50px; border: 1px solid var(--green);">ТюмГУ</span>
+                    </div>
+                </div>
+
+                <div class="profession-list">
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">🧬 Системный биотехнолог</div>
+                            <div class="profession-desc">Замена устаревших технологий новыми биорешениями в промышленности и медицине</div>
+                        </div>
+                        <div class="profession-salary">от 120 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">🏗️ Архитектор живых систем</div>
+                            <div class="profession-desc">Проектирование экосистем с ГМ-организмами, очистка среды, замкнутые биосистемы</div>
+                        </div>
+                        <div class="profession-salary">от 150 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">💊 Биофармаколог</div>
+                            <div class="profession-desc">Создание биопрепаратов нового поколения, замена химических лекарств на биоаналоги</div>
+                        </div>
+                        <div class="profession-salary">от 130 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">🫀 Тканевый инженер</div>
+                            <div class="profession-desc">Выращивание тканей и органов для трансплантации, работа с биопринтерами</div>
+                        </div>
+                        <div class="profession-salary">от 140 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">⚖️ Биоэтик</div>
+                            <div class="profession-desc">Контроль этичности экспериментов, нормативное регулирование генетических технологий</div>
+                        </div>
+                        <div class="profession-salary">от 100 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">🦾 Разработчик протезов и имплантов</div>
+                            <div class="profession-desc">Создание киберпротезов и нейроимплантов, совместимых с живыми тканями</div>
+                        </div>
+                        <div class="profession-salary">от 160 000 ₽</div>
+                    </div>
+
+                    <div class="profession-item">
+                        <div>
+                            <div class="profession-name">🌆 Урбанист-эколог</div>
+                            <div class="profession-desc">Проектирование биогородов, энергоэффективные здания с живыми системами очистки</div>
+                        </div>
+                        <div class="profession-salary">от 110 000 ₽</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="resources" class="page">
+            <div class="container">
+                <div class="resource-category">
+                        <h3>🌐 Сайты</h3>
+                        <ul class="resource-list">
+                            <li><a href="https://pubmed.ncbi.nlm.nih.gov" target="_blank">PubMed — научные статьи</a></li>
+                            <li><a href="https://www.nature.com/bioeng" target="_blank">Nature Bioengineering</a></li>
+                            <li><a href="https://learn.genetics.utah.edu" target="_blank">Learn Genetics — интерактив</a></li>
+                            <li><a href="https://www.crisprtx.com" target="_blank">CRISPR Therapeutics</a></li>
+                            <li><a href="#" target="_blank">BioGenius Library</a></li>
+                        </ul>
+                </div>
+
+
+                <div style="margin-top: 3rem; background: rgb(42, 85, 62); border-radius: 15px; padding: 2rem;">
+                    <h3 style="color: var(--pink); margin-bottom: 1rem;">📝 Открытые курсы</h3>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">
+                            <span>Введение в биоинженерию (Coursera)</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--gray); padding-bottom: 0.5rem;">
+                            <span>CRISPR: от основ до применения (edX)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">BioFactory</div>
+                <p style="color: #AAAAAA; margin: 1rem 0;">Образовательный сайт о биоинженерии для молодежи.</p>
+                <div class="footer-quote">«Биоинженерия - это способность читать и переписывать книгу жизни»</div>
+            </div>
+
+            <div>
+                <h4 style="color: var(--pink); margin-bottom: 1.5rem;">Навигация</h4>
+                <div class="footer-links">
+                    <a href="#" onclick="showPage('history')">История</a>
+                    <a href="#" onclick="showPage('scientists')">Ученые</a>
+                    <a href="#" onclick="showPage('tech')">Технологии</a>
+                    <a href="#" onclick="showPage('professions')">Профессии</a>
+                    <a href="#" onclick="showPage('resources')">Ресурсы</a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="copyright">
+            © 2026 BioFactory — образовательный сайт о биоинженерии.
+        </div>
+</footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
